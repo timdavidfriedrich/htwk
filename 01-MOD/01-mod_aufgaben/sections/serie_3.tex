@@ -1,0 +1,304 @@
+\newpage
+
+\section{Serie}
+
+\subsection{Aufgabe}
+
+    \begin{enumerate}[label=(\arabic*)]
+        \item \adjustbox{valign=t}{
+            $
+            \begin{array}{c c c c}
+                p & q & r & \ \neg p \vee (q \leftrightarrow r) \\  \midrule
+                0 & 0 & 0 & 1 \\
+                0 & 0 & 1 & 1 \\
+                0 & 1 & 0 & 1 \\
+                0 & 1 & 1 & 1 \\
+                1 & 0 & 0 & 1 \\
+                1 & 0 & 1 & 0 \\
+                1 & 1 & 0 & 0 \\
+                1 & 1 & 1 & 1 \\
+            \end{array}
+            $ }
+            \\\\
+            a. Es gilt mind. einmal $W: P \to {0, 1}$, also erfüllbar. \\
+            b. Es gilt jedoch nicht immer $W: P \to {0, 1}$, also nicht allgemeingültig.
+        \item \adjustbox{valign=t}{
+            $
+            \begin{array}{c c c c}
+                p & q & r & \ \ q \to (r \wedge \neg p) \\  \midrule
+                0 & 0 & 0 & 1 \\
+                0 & 0 & 1 & 1 \\
+                0 & 1 & 0 & 0 \\
+                0 & 1 & 1 & 1 \\
+                1 & 0 & 0 & 1 \\
+                1 & 0 & 1 & 1 \\
+                1 & 1 & 0 & 0 \\
+                1 & 1 & 1 & 0 \\
+            \end{array}
+            $ }
+            \\\\
+            a. Es gilt mind. einmal $W: P \to {0, 1}$, also erfüllbar. \\
+            b. Es gilt jedoch nicht immer $W: P \to {0, 1}$, also nicht allgemeingültig.
+        \item \adjustbox{valign=t}{
+            $
+            \begin{array}{c c c}
+                p & q & \ (p \wedge q) \wedge (p \to \neg q) \\  \midrule
+                0 & 0 & 0 \\
+                0 & 1 & 0 \\
+                1 & 0 & 0 \\
+                1 & 1 & 0 \\
+            \end{array}
+            $ }
+            \\\\
+            a. Kein einziges Mal $W: P \to {0, 1}$, also nicht erfüllbar. \\
+            b. Folglich nicht allgemeingültig.
+        \item \adjustbox{valign=t}{
+            $
+            \begin{array}{c c c}
+                p & q & \ (p \to (q \to p)) \\  \midrule
+                0 & 0 & 1 \\
+                0 & 1 & 1 \\
+                1 & 0 & 1 \\
+                1 & 1 & 1 \\
+            \end{array}
+            $ }
+            \\\\
+            a. Es gilt immer $W: P \to {0, 1}$, also erfüllbar. \\
+            b. Folglich allgemeingültig.
+        \item \adjustbox{valign=t}{
+            $
+            \begin{array}{c c c c}
+                p & q & r & \ \ \neg(p \wedge r) \wedge (p \to q) \\  \midrule
+                0 & 0 & 0 & 1 \\
+                0 & 0 & 1 & 1 \\
+                0 & 1 & 0 & 1 \\
+                0 & 1 & 1 & 1 \\
+                1 & 0 & 0 & 0 \\
+                1 & 0 & 1 & 0 \\
+                1 & 1 & 0 & 1 \\
+                1 & 1 & 1 & 0 \\
+            \end{array}
+            $ }
+            \\\\
+            a. Es gilt mind. einmal $W: P \to {0, 1}$, also erfüllbar. \\
+            b. Es gilt jedoch nicht immer $W: P \to {0, 1}$, also nicht allgemeingültig.
+    \end{enumerate}
+    
+    
+\newpage
+
+\subsection{Aufgabe}
+
+    \begin{enumerate}[label=(\alph*)]
+        \item \adjustbox{valign=t}{
+            $\begin{array}{c c c}
+                p & q & p \to q \\  \midrule
+                0 & 0 & 1 \\
+                0 & 1 & 1 \\
+                1 & 0 & 0 \\
+                1 & 1 & 1 \\
+            \end{array} \ \ \ \ 
+            \begin{array}{c c c}
+                p & q & (\neg q) \to (\neg p) \\  \midrule
+                0 & 0 & 1 \\
+                0 & 1 & 1 \\
+                1 & 0 & 0 \\
+                1 & 1 & 1 \\
+            \end{array}
+            $ }
+            \\\\\\
+            $Mod(p \to q) = \{W_{00}, W_{01}, W_{11}\} = Mod((\neg q) \to (\neg p))$
+            \\\\
+            $p \to q \equiv (\neg q) \to (\neg p)$ \\
+
+              
+        \item \adjustbox{valign=t}{
+            $\begin{array}{c c c}
+                p & q & \neg(p \to q) \\  \midrule
+                0 & 0 & 0 \\
+                0 & 1 & 0 \\
+                1 & 0 & 1 \\
+                1 & 1 & 0 \\
+            \end{array} \ \ \ \ 
+            \begin{array}{c c c}
+                p & q & (\neg p) \to (\neg q) \\  \midrule
+                0 & 0 & 1 \\
+                0 & 1 & 0 \\
+                1 & 0 & 1 \\
+                1 & 1 & 1 \\
+            \end{array}
+            $ }
+            \\\\\\
+            $Mod(\neg(p \to q)) = \{ W_{10}\}, \ \ 
+            Mod((\neg p) \to (\neg q)) = \{W_{00}, W_{10}, W_{11}\}$
+            \\\\
+            $\neg(p \to q) \centernot{\equiv} (\neg p) \to (\neg q)$ \\
+            
+        \item \adjustbox{valign=t}{
+            $\begin{array}{c c c}
+                p & q & \neg(p \vee q) \\  \midrule
+                0 & 0 & 1 \\
+                0 & 1 & 0 \\
+                1 & 0 & 0 \\
+                1 & 1 & 0 \\
+            \end{array} \ \ \ \ 
+            \begin{array}{c c c}
+                p & q & (\neg p) \vee (\neg q) \\  \midrule
+                0 & 0 & 1 \\
+                0 & 1 & 1 \\
+                1 & 0 & 1 \\
+                1 & 1 & 0 \\
+            \end{array}
+            $ }
+            \\\\\\
+            $Mod(\neg(p \vee q)) = \{ W_{00}\}, \ \ 
+            Mod((\neg p) \vee (\neg q)) = \{W_{00}, W_{01}, W_{10}\}$
+            \\\\
+            $\neg(p \vee q) \centernot{\equiv} (\neg p) \vee (\neg q)$ \\
+            \item \adjustbox{valign=t}{
+            $\begin{array}{c c c}
+                p & q & \ \ p \to (q \to p) \\  \midrule
+                0 & 0 & 1 \\
+                0 & 1 & 1 \\
+                1 & 0 & 1 \\
+                1 & 1 & 1 \\
+            \end{array}
+            $
+            }
+            \\\\\\
+            $Mod(p \to (q \to p)) = 1 = W(\mathfrak{t})$ \ \ 
+            \\\\
+            $p \to (q \to p) \equiv \mathfrak{t}$ 
+            
+    \end{enumerate}
+
+
+
+\newpage
+
+\subsection{Aufgabe}
+    
+    \begin{flalign*}
+        \varphi &= ((p \to q) \to ((p \to r) \to (p \to (q \wedge r)))) &&\\
+        &= ((\neg p \vee q) \to ((\neg p \vee r) \to (\neg p \vee (\neg(p \to \neg r))))) &&\\
+        &= (\neg(\neg p \vee q) \vee (\neg(\neg p \vee r) \vee (\neg p \vee (\neg(\neg p \vee \neg r))))) &&\\
+        &= \dunder{((p \wedge \neg q) \vee ((p \wedge \neg r) \vee (\neg p \vee (p \wedge r))))}
+    \end{flalign*}
+    \\
+    Anhand der letzten Umformung kann man erkennen, dass die Aussage allgemeingültig sein muss.
+    Ausschlaggebend sind die Disjunktoren, die einzelne Teilformeln miteinander verknüpfen.
+    Die Teilformel $(\neg p \vee (p \wedge r))$ ist u.a. immer wahr, wenn p falsch ist. Durch die Disjunktionen ist zu erkennen, dass die gesamte Aussage immer wahr ist, wenn p falsch ist. Somit ist die Aussage bereits in mind. 4 von 8 Fälle wahr. Aus $\neg(\neg p \vee q)$ lässt sich schlussfolgern, dass, wenn p wahr ist und q falsch, die Aussage stets wahr sein muss - mind. 6 von 8 Fälle sind wahr. Die Teilformel $(p \wedge \neg r)$ sagt aus, dass, wenn p wahr ist und r falsch, die Aussage wahr ist. Betrachtet man schließlich noch $(p \wedge r)$, dann weiß man, dass die Aussage auch wahr ist, wenn u.a. p wahr und r wahr ist. Somit sind alle Fälle abgedeckt und zweifellos wahr. Die Aussage muss allgemeingültig sein.
+
+
+\newpage
+\subsection{Aufgabe}
+\subsubsection{Aussage (a: $\{\neg,\to\}$)}
+    \paragraph{Induktionsanfang:} \ \\\\
+    \noindent\hspace*{5mm}
+    Zu jedem $\varphi = p \in P$ erfüllt $\psi = p$ (Ansatz) beide Eigenschaften \\
+    \\
+    \noindent\hspace*{10mm}
+    E1: $\quad \psi \in AL_{\{\neg,\to\}}(P)$, nach IA in der Def. von $AL_{\{\neg,\to\}}(P)$ und \\
+    \noindent\hspace*{10mm}
+    E2: $\quad \varphi \equiv \psi$, wegen $Mod(\varphi)=Mod(p)=Mod(\psi)$ \\
+    
+    \paragraph{Induktionsschritt:} \ \\\\
+    \noindent\hspace*{5mm}
+    \textbf{IH:}  \quad Zu $\varphi_1, \varphi_2 \in AL(P)$ existieren Formel $\psi_1, \psi_2$ mit \\\\
+    \noindent\hspace*{10mm}
+    E1: $\quad \psi_1, \psi_2 \in AL_{\{\neg,\to\}}(P)$ und \\
+    \noindent\hspace*{10mm}
+    E2: $\quad \varphi_1 \equiv \psi_1$ und $\varphi_2 \equiv \psi_2$ \\
+    
+    \noindent\hspace*{5mm}
+    \textbf{IB$\leftrightarrow$:}\quad  Zu $\varphi=\varphi_1\leftrightarrow\varphi_2$ existiert eine Formel $\psi$ mit \\\\
+    \noindent\hspace*{10mm}
+    E1: $\quad \psi \in AL_{\{\neg,\to\}}(P)$ und \\
+    \noindent\hspace*{10mm}
+    E2: $\quad \varphi \equiv \psi$ \\\\
+    \noindent\hspace*{5mm}
+    \textbf{IB$\mathfrak{t}$:} \quad Zu $\varphi=\mathfrak{t}$ existiert eine Formel $\psi$ mit E1 und E2 \\\\
+    \noindent\hspace*{5mm}
+    \textbf{IB$\mathfrak{f}$:} \quad Zu $\varphi=\mathfrak{f}$ existiert eine Formel $\psi$ mit E1 und E2 \\\\
+    \noindent\hspace*{5mm}
+    \textbf{B$\leftrightarrow$:} \quad z.z.: aus IH$\leftrightarrow, \quad$ \color{red} Ansatz: $\varphi=\varphi_1\leftrightarrow\varphi_2$ \color{black} \\\\
+    \noindent\hspace*{10mm}
+        Beweis: Für $\varphi=\varphi_1\leftrightarrow\varphi_2$ gelten \\\\
+        \noindent\hspace*{15mm}
+        E1: $\quad \psi \in AL_{\{\neg,\to\}}(P)$ wegen $\psi_1 \in AL_{\{\neg,\to\}}(P)$ (nach IH) \\
+        \noindent\hspace*{25mm}
+        und IS in der Definition von $AL_{\{\neg,\to\}}(P)$ \\
+        \noindent\hspace*{15mm}
+        E2: $\quad \varphi \equiv \psi$ (gezeigt durch $Mod(\psi)= Mod(\varphi)$)
+    \
+    \begin{flalign*}
+        \noindent\hspace{25mm}
+        Mod(\psi) &= Mod(\varphi_1\leftrightarrow\varphi_2) && \\
+                  &= \{W:P\to\{0,1\}\ |\ W(\varphi_1\leftrightarrow\varphi_2)=1\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\varphi_1) = W(\varphi_2) = 1 \} && \\
+                  &= \{W:P\to\{0,1\}\ |\ W((\varphi_1\to\varphi_2)\wedge(\varphi_2\to\varphi_1))=1\} && \\
+                  &= \{W:P\to\{0,1\}\ |\ W(\neg((\varphi_1\to\varphi_2) \to \neg(\varphi_2\to\varphi_1)))=1\} && \\
+    \end{flalign*}
+    \\\\\\\\
+    \noindent\hspace*{5mm}
+    \textbf{B$\mathfrak{t}$:} \quad z.z.: aus IH$\mathfrak{t}, \quad$ \color{red} Ansatz: $\varphi=\mathfrak{t}$ \color{black} \\\\
+    \noindent\hspace*{10mm}
+        Beweis: Für $\varphi=\mathfrak{t}$ gelten \\\\
+        \noindent\hspace*{15mm}
+        E1: $\quad \psi \in AL_{\{\neg,\to\}}(P)$ wegen $\psi_1 \in AL_{\{\neg,\to\}}(P)$ (nach IH) \\
+        \noindent\hspace*{25mm}
+        und IS in der Definition von $AL_{\{\neg,\to\}}(P)$ \\
+        \noindent\hspace*{15mm}
+        E2: $\quad \varphi \equiv \psi$ (gezeigt durch $Mod(\psi)= Mod(\varphi)$)
+    \
+    \begin{flalign*}
+        \noindent\hspace{25mm}
+        Mod(\psi) &= Mod(\mathfrak{t}) && \\
+                  &= \{W:P\to\{0,1\}\ |\ W(\mathfrak{t})=1\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\mathfrak{t})=W(\varphi)=1\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\varphi\to\varphi)=1\} &&\\
+    \end{flalign*}
+    \\
+    \noindent\hspace*{5mm}
+    \textbf{B$\mathfrak{f}$:} \quad z.z.: aus IH$\mathfrak{f}, \quad$ \color{red} Ansatz: $\varphi=\mathfrak{f}$ \color{black} \\\\
+    \noindent\hspace*{10mm}
+        Beweis: Für $\varphi=\mathfrak{f}$ gelten \\\\
+        \noindent\hspace*{15mm}
+        E1: $\quad \psi \in AL_{\{\neg,\to\}}(P)$ wegen $\psi_1 \in AL_{\{\neg,\to\}}(P)$ (nach IH) \\
+        \noindent\hspace*{25mm}
+        und IS in der Definition von $AL_{\{\neg,\to\}}(P)$ \\
+        \noindent\hspace*{15mm}
+        E2: $\quad \varphi \equiv \psi$ (gezeigt durch $Mod(\psi)= Mod(\varphi)$)
+    \
+    \begin{flalign*}
+        \noindent\hspace{25mm}
+        Mod(\psi) &= Mod(\mathfrak{t}) && \\
+                  &= \{W:P\to\{0,1\}\ |\ W(\mathfrak{f})=0\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\mathfrak{f})=W(\varphi)=0\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\varphi\to\neg\varphi)=1\} &&\\
+    \end{flalign*}
+
+\newpage
+\subsubsection{Aussage (b: $\{\mathfrak{f},\to\}$)}
+    Induktionsanfang und -schritt aus der vorherigen Teilaufgabe behalten ihre Gültigkeit.
+    \begin{flalign*}
+        \noindent\hspace{25mm}
+        Mod(\psi) &= Mod(\varphi_1\leftrightarrow\varphi_2) && \\
+                  &= \{W:P\to\{0,1\}\ |\ W(\varphi_1\leftrightarrow\varphi_2)=1\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\varphi_1) = W(\varphi_2) = 1 \} && \\
+                  &= \{W:P\to\{0,1\}\ |\ W((\varphi_1\to\varphi_2)\wedge(\varphi_2\to\varphi_1))=1\} && \\
+                  &= \{W:P\to\{0,1\}\ |\ W(\neg((\varphi_1\to\varphi_2) \to \neg(\varphi_2\to\varphi_1)))=1\} && \\
+    \end{flalign*}
+    \begin{flalign*}
+        \noindent\hspace{25mm}
+        Mod(\psi) &= Mod(\mathfrak{t}) && \\
+                  &= \{W:P\to\{0,1\}\ |\ W(\mathfrak{t})=1\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\mathfrak{t})=W(\varphi)=1\} &&\\
+                  &= \{W:P\to\{0,1\}\ |\ W(\varphi\to\varphi)=1\} &&\\
+    \end{flalign*}
+    Laut induktiver Definition aus der Vorlesung sind $\{\neg, \vee, \wedge\}$ Junktorbasen.
+
+    ~\\\\
+    $ \varphi \equiv \psi $ gdw. $\varphi \leftrightarrow \psi $ allgemeingültig \\\\
+    $ \varphi \models \psi $ gdw. $\varphi \to \psi $ allgemeingültig  \\\\
+    $ \models \psi$ gdw. $\psi $ allgemeingültig
