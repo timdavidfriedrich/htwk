@@ -1,0 +1,12 @@
+div + p {
+	text-decoration:underline;
+}
+body > div > p + p, div > div > p:first-of-type {
+	color:blue;
+}
+div span {
+	color:red;
+}
+div div span {
+	color:green;
+}
