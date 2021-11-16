@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flexbox</title>
+
+<style>
+    .teaser{
+        display: flex;
+        flex: 1 1 10%;
+        flex-direction: flex;
+        flex-flow: row-wrap;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    .teaser-item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 200px;
+        padding: 10px;
+        margin: 5px;
+        align-items: baseline;
+        box-sizing: border-box;
+        border: 2px solid black;
+    }
+    .teaser-item > div:first-child{
+        margin-right: 10px;
+        font-size: 2em;
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="teaser">
+        <div class="teaser-item">
+            <div>1</div>
+            <div>Nearly-Headless Nick now string them together,
+                and answer me this, which creature would you be
+                unwilling to kiss?</div>
+        </div>
+        <div class="teaser-item">
+            <div>2</div>
+            <div>Thestral dirigible plums, Viktor Krum hexed memory
+                charm Animagus Invisibility Cloak three-headed Dog.</div>
+        </div>
+        <div class="teaser-item">
+            <div>3</div>
+            <div>Poltergeist sticking charm, troll umbrella stand
+                flying cars golden locket Lily Potter.</div>
+        </div>
+        <div class="teaser-item">
+            <div>4</div>
+            <div>Wingardium Leviosa hippogriff, house dementors
+                betrayal. Holly, Snape centaur portkey ghost Hermione
+                spell bezoar Scabbers.</div>
+        </div>
+        <div class="teaser-item">
+            <div>5</div>
+            <div>Hedwig Daily Prophet treacle tart full-moon
+                Ollivanders You-Know-Who cursed.</div>
+        </div>
+        <div class="teaser-item">
+            <div>6</div>
+            <div>Peruvian-Night-Powder werewolf, Dobby pear-tickle
+                half-moon-glasses, Knight-Bus.</div>
+        </div>
+    </div>
+</body>
+</html>
