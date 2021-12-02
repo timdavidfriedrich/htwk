@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position</title>
     <style>
-        #Rahmen {position:absolute;top:50px;left:50px;width:500px;height:500px}
+        #Rahmen {
+            position:absolute;top:50px;left:50px;width:500px;height:500px;
+            background-color:#000080;border-style:solid;border-color:#FFD700;
+        }
+        #Rahmen > div {color: #FFD700; font-size: 24px; font-style: italic;}
         #text1 {position:absolute; top:0px; left:0px;}
         #text2 {position:absolute; top:150px; right:10px;}
         #text3 {position:absolute; top:300px; left:10px;}
         #text4 {position:absolute; bottom:5px; right:10px;}
-        #img1 {position:absolute; top:50px; left: 200px;}
+        #img1 {position:absolute; top:55px; left: 188px;}
         #img2 {position:absolute; top:100px; left: 75px;}
         #img3 {position:absolute; top:305px; left: 100px;}
         #img4 {position:absolute; top:195px; left: 217px;}
     </style>
 </head>
 <body>
-    <div id="Rahmen" style="background-color:#000080;border-style:solid;border-color:#FFD700">
-        <div style="color: #FFD700; font-size: 24px; font-style: italic;">
+    <div id="Rahmen">
+        <div>
             <div id="text1">Sehenswürdigkeiten</div>
             <div id="text2">der</div>
             <div id="text3">Stadt</div>
