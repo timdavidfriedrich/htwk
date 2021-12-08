@@ -3,6 +3,7 @@ import networkx as nx
 from networkx.algorithms import isomorphism
 
 
+
 # Run if submit button clicked
 ################################################################
 def calculate(*args):
@@ -61,6 +62,8 @@ def calculate(*args):
     output_text.pack()
 ################################################################
 
+
+
 # Run on start and if reset button clicked
 ################################################################
 def main():
@@ -103,6 +106,7 @@ def main():
     tk.mainloop()
     print("\nPROGRAM END OR RESET\n")
 ################################################################
+
 
 
 if __name__ == '__main__':
