@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super++</title>
+</head>
+
+<script>
+    var summand, sum;
+    function init() {
+        summand = document.getElementsByName("summand")[0];
+        sum = document.getElementsByName("sum")[0];
+        foc();
+    }
+    function add() { 
+        isNaN(summand.value)
+        ? alert("Geben Sie einen Zahlenwert ein!")
+        : sum.value = Number(sum.value) + Number(summand.value);
+        del();
+    }
+    function del() { summand.value = ""; }
+    function res() { del(); sum.value = "0"; }
+    function foc() { summand.focus(); }
+    window.addEventListener("DOMContentLoaded", init);
+</script>
+
+<body>
+    <h1>Der Summator Super++</h1>
+    <form>
+        <p>
+            <input type="text" name="summand" size="12" maxlength="12" /> Summanden <br/>
+            <input type="text" name="sum" size="12" maxlength="12" value="0" readonly="readonly" /> Summe <br/>
+        </p>
+        <p>
+            <input type="button" value="Addieren" onclick="add(); foc();" />
+            <input type="button" value="Eingabe löschen" onclick="del(); foc();" />
+            <input type="button" value="Zurücksetzen" onclick="res(); foc();" />
+        </p>
+    </form>
+</body>
+</html>
