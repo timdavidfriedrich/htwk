@@ -6,7 +6,7 @@ from networkx.algorithms import isomorphism
 
 # Run if submit button clicked
 ################################################################
-def calculate(*args):
+def calculate():
     edges_raw = []
 
     for j in range(len(graphs)):
@@ -82,19 +82,19 @@ def main():
     # Add hint at the top
     tk.Label(root, text="\n( Einträge stets OHNE Klammern einfügen )").pack()
 
-    # Add a node input area with return string @tk_nodes_raw
+    # Add a node input area with string @tk_nodes_raw which gets the input
     global tk_nodes_raw
     tk_nodes_raw = tk.StringVar()
     tk.Label(root, text="\nKnoten der Graphen:").pack()
-    nodes_entry = tk.Entry(root, textvariable=tk_nodes_raw).pack()
+    tk.Entry(root, textvariable=tk_nodes_raw).pack()
 
-    # Add edge input areas for the given number of graphes
-    # and create a return list of strings @tk_edges_raw 
+    # Add edge input areas (Entry) for the given number of graphes
+    # and create a list of strings @tk_edges_raw which get the input
     global tk_edges_raw
     tk_edges_raw = [tk.StringVar() for n in range(len(graphs)) ]
     for j in range(len(graphs)):
         tk.Label(root, text="\nKanten von Graph {}:".format(j + 1)).pack()
-        edges_entry = tk.Entry(root, textvariable=tk_edges_raw[j]).pack()
+        tk.Entry(root, textvariable=tk_edges_raw[j]).pack()
         
     # Add submit button at the bottom
     tk.Label(root, text="").pack()
@@ -108,9 +108,13 @@ def main():
 ################################################################
 
 
-
+# Run @main()
+# @refresh() is used to restart
 if __name__ == '__main__':
     def refresh():
         root.destroy()
         main()
     main()
+
+
+# Grüße, Tim.
