@@ -1,5 +1,5 @@
 # HTWK
-Kram, der im Studium halt so ansteht.
+Kram aus'm Studium.
 
 
 ## 01-Semester
