@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weihnachts-Counter</title>
     <script>
-        //const today = new Date('December 24, 2021 00:13:37');
+        //const today = new Date('December 25, 2021 00:13:37');
         const today = new Date;
         const day = today.getDate();
         const month = today.getMonth();
 
-        if (month != 11) {
+        if (month != 11 || (month == 11 && day > 26)) {
             document.write("<h1>Es dauert noch lange bis Weihnachten!");
-        } else if (day == 24) {
+        } else if (day == 24 || day == 25 || day == 26) {
             document.write("<h1>Es ist Weihnachten!");
         } else if (day == 23) {
             document.write("<h1>Es ist noch 1 Tag bis Weihnachten!");
@@ -21,22 +21,22 @@
         }
 
         var i = 0;
-        var bilder = new Array("ressources/r7/baer1.jpg", "ressources/r7/pingu.jpg", "ressources/r7/baer2.jpg");
+        var bilder = new Array("baer1.jpg", "pingu.jpg", "baer2.jpg");
 
         function wechsel() {
             i = (i + 1) % bilder.length;
             document.images[1].src = bilder[i];
-        }
+        } 
     </script>
 </head>
 
 <body>
     <p>
-        <img src="ressources/r7/bo1.jpg"
-            onmouseover="document.images[0].src='ressources/r7/bo2.jpg'"
-            onmouseout="document.images[0].src='ressources/r7/bo1.jpg'"
+        <img src="bo1.jpg"
+            onmouseover="document.images[0].src='bo2.jpg'"
+            onmouseout="document.images[0].src='bo1.jpg'"
             alt="Weihnachtsbotschaft" />
-        <img src="ressources/r7/baer1.jpg"
+        <img src="baer1.jpg"
             onmouseover="wechsel()"
             onmouseout="wechsel()"
             alt="Bären oder Pinguine" />
