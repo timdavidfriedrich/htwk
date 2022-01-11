@@ -1,0 +1,218 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Flexbox */
+body, header, nav, main, section, article, aside, footer, div{
+
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+body, aside, section, article{
+
+    flex-flow: column;
+}
+header, main, dialog{
+
+    flex-flow: row wrap;
+}
+body, main, section, header, footer{
+
+    min-width: 320px;
+}
+body{
+
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+header, footer{
+
+    width: 60%;
+    align-items: center;
+}
+
+/* Elemente */
+header{
+
+    height: 10%;
+    margin: 25px 0 0 0;
+}
+header h1{
+
+    margin: 0;
+    width: 40%;
+    text-align: right;
+}
+
+/* Navigation */
+nav{
+
+    width: 60%;
+    font-size: 24px;
+    margin: 0;
+}
+nav a{
+
+    background-color: black;
+    margin: 0 11px 0 0;
+    border-radius: 2px;
+    padding: 0 10px 0 10px;
+    color:white;
+    text-decoration: none;
+}
+
+main{
+
+    width: 60%;
+    height: 100%;
+}
+section{
+
+    width: 60%;
+    height: 100%;
+    min-width: 300px;
+    padding-right: 45px;
+    hyphens: auto;
+    font-kerning: normal;
+}
+section h2{
+
+    font-size: 28px;
+    margin: 0 0 10px 0;
+
+}
+section article {
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+}
+section article h3, p{
+    
+    margin: 0;
+}
+
+aside{
+
+    width: 40%;
+}
+aside article a{
+
+    margin: 0;
+    font-style: italic;
+    color: black;
+}
+aside a:hover{
+
+    color: red;
+}
+aside article {
+
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 15px;
+    font-kerning: normal;
+}
+aside article:nth-child(1) {
+
+    margin: 15px 0 10px 0;
+}
+aside article p{
+    
+    margin: 0;
+}
+
+footer {
+
+    height: 10vh;
+}
+
+#cookie {
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+    height: 120px;
+    border: 0;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    background-color: black;
+    color: white;
+    opacity: 0;
+}
+#cookie-button {
+    height: 36px;
+    font-size: 16px;
+    justify-content: center;
+    align-content: center;
+    border: 0;
+    border-radius: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: white;
+    color: black;
+}
+#scroll-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#scroll {
+    position: fixed;
+    display: none;
+    right: 32px;
+    bottom: 32px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 25px;
+    background-color: black;
+    color: white
+}
+
+
+/* BREAKPOINT: Andere Ansicht für Mobilgeräte */
+@media only screen and (max-width: 1280px) {
+
+    header, main, footer{
+
+        width: 80%;
+    }
+
+    header nav {
+
+        width: 100%;
+    }
+
+    header h1 {
+
+        width: 100%;
+        text-align: left;
+    }
+
+    section {
+
+        width: 100%;
+        height: 100%;
+        padding-right: 0px;
+    }
+
+    section article {
+
+        margin: 0 0 10px 0;
+    }
+
+    aside{
+
+        width: 100%;
+    }
+
+}
