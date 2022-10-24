@@ -1,0 +1,25 @@
+body {
+    font-family: "Poppins";
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexbox div {
+    margin: 1em;
+    padding: 1em;
+    border: 0.25em solid black;
+}
+
+@media only screen and (max-width: 1200px) {
+    .flexbox {
+        flex-direction: column;
+    }
+}
