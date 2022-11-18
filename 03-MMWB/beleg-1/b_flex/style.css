@@ -1,0 +1,55 @@
+::-webkit-scrollbar { width: 0; }
+
+html, body {
+    /* Vergrößerung der Schrift bewirkt Vergrößerung aller Elemente */
+    font-size: 32px;
+    height: 100%;
+    background-color: cornflowerblue;
+}
+
+.box {
+    /* Statt dem margin hier wäre auch bei .container "gap: 0.125rem;" (Flexbox) möglich, 
+    aber ich wollte, dass ALLE Boxen einen Abstand haben, nicht nur die im Flex-Container.*/
+    margin: 0.125rem; 
+    min-height: 5rem;
+    border: 0.25rem solid steelblue;
+    border-radius: 0.25rem;
+    background-color: white;
+}
+
+.header {
+    min-height: 5rem;
+    border-color: black;
+    background-color: darksalmon;
+}
+
+.container {
+    height: calc(100% - 10rem);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container_nav {
+    flex: 0 0 10rem;
+}
+
+.container_mid {
+    flex: 3 1 10rem;
+}
+
+.container_right {
+    flex: 1 1 10rem;
+}
+
+.footer {
+    min-height: 2.5rem;
+    background-color: darksalmon;
+}
+
+/* Eigentlich nicht nötig. Ich wollte aber, dass .container_nav  beim Umbruch die volle Screen-
+Breite nutzt, OBWOHL dessen Breite fix ist und sich weiterhin NICHT durch die Flexbox anpasst.*/
+@media only screen and (max-width: 720px) {
+    .container_nav {
+        flex-grow: 1;
+    }
+}
