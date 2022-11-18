@@ -1,5 +1,8 @@
 ::-webkit-scrollbar { width: 0; }
 
+/* Diese Lösung hier gefällt mir nicht gut.
+Meine Flexbox-Variante ist schöner gelöst. */
+
 html, body {
     height: 100%;
     margin: 0;
