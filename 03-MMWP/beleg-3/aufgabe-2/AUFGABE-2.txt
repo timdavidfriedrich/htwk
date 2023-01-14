@@ -1,0 +1,9 @@
+Nein, diese Browseranwendung ist nicht korrekt lauffähig auf Mobilgeräten,
+denn die Drag-&-Drop-Steuerung funktioniert in Verbindung mit einer Maus.
+
+
+Um die Bilder auch auf Mobilgeräten (mit Touchsteuerung) draggen zu können,
+müssen eventuell andere Events bzw. APIs verwendet werden, die auch Touches erkennen.
+
+Zudem ist das Layout nicht smartphone-freundlich. Die Bilder sind sehr klein
+und der Papierkorb befindet sich hinter der Picturesbox.

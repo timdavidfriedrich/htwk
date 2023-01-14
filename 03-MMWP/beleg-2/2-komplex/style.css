@@ -1,0 +1,67 @@
+.grid-container > div {
+    min-height: 150px;
+    border-radius: 16px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: calc(100vh - 1em);
+    gap: 1em;
+    grid-template-areas: ". . f . ." "a a f b b" "a a d d e" "c c d d h" ". g . . h";
+}
+
+@media only screen and (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a b" "c d" "e f" "g h";
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h";
+    }
+}
+
+#item-a {
+    background-color:#C03221;
+    grid-area: a;
+}
+
+#item-b {
+    background-color:#BC9EC1;
+    grid-area: b;
+}
+
+#item-c {
+    background-color: #F2D0A4;
+    grid-area: c;
+}
+
+#item-d {
+    background-color:#545E75;
+    grid-area: d;
+}
+
+#item-e {
+    background-color:#3F826D;
+    grid-area: e;
+}
+
+#item-f {
+    background-color: #609786;
+    grid-area: f;
+}
+
+#item-g {
+    background-color: #84732B;
+    grid-area: g;
+}
+
+#item-h {
+    background-color:#56CBF9;
+    grid-area: h;
+}

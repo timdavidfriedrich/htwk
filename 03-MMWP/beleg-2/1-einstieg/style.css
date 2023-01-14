@@ -1,0 +1,44 @@
+.grid-container > div {
+    min-height: 150px;
+    border-radius: 16px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px auto;
+    height: calc(100vh - 1em);
+    gap: 1em;
+}
+
+#item-a {
+    background-color:#C03221;
+}
+
+#item-b {
+    background-color:#BC9EC1;
+}
+
+#item-c {
+    background-color: #F2D0A4;
+}
+
+#item-d {
+    background-color:#545E75;
+}
+
+#item-e {
+    background-color:#3F826D;
+}
+
+#item-f {
+    background-color: #609786;
+}
+
+#item-g {
+    background-color: #84732B;
+}
+
+#item-h {
+    background-color:#56CBF9;
+}
