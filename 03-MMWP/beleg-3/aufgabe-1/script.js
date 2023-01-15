@@ -1,16 +1,18 @@
-function initiate(){
+function initiate() {
    const images = document.querySelectorAll('#picturesbox > img');
-   for (let i = 0; i < images.length; i++) images[i].addEventListener('dragstart', dragged, false);
+   for (let i = 0; i < images.length; i++) {
+      images[i].addEventListener('dragstart', dragstart, false);
+   }
 
    const dropboxes = document.querySelectorAll('#dropbox > div, #picturesbox');
-   for(let i = 0; i < dropboxes.length; i++){
+   for (let i = 0; i < dropboxes.length; i++) {
       dropboxes[i].addEventListener('dragover', dragover, false);
       dropboxes[i].addEventListener('dragleave', dragleave, false);
-      dropboxes[i].addEventListener('drop', dropped, false);   
+      dropboxes[i].addEventListener('drop', drop, false);   
    }
 }
 
-function dragged(e){
+function dragstart(e) {
    e.dataTransfer.setData('text/plain', e.target.id);
    e.dataTransfer.dropEffect = 'move';
 }
@@ -24,7 +26,7 @@ function dragleave(e) {
    e.target.style.opacity = 1;
 }
 
-function dropped(e){
+function drop(e) {
    e.target.style.opacity = 1;
    if (isTargetValid(e)) {
       e.preventDefault();
@@ -56,4 +58,3 @@ function elementOf(e) {
 }
 
 window.addEventListener('load', initiate, false);
-
