@@ -1,9 +1,34 @@
-Nein, diese Browseranwendung ist nicht korrekt lauffähig auf Mobilgeräten,
-denn die Drag-&-Drop-Steuerung funktioniert in Verbindung mit einer Maus.
+Die aktuelle Umsetzung der Browseranwendung ist auf Smartphones zwar grundsätzlich lauffähig, was heißt,
+man kann die Website aufrufen und alle Elemente werden geladen, aber sie kann nicht korrekt genutzt werden,
+da das Drag-and-Drop-Feature nicht funktioniert auf einem Smartphone.
+Ob eine Drag-and-Drop-Anwendung auf einem Smartphone ordnungsgemäß funktioniert, hängt von verschiedenen
+Faktoren ab. Hier sind einige Punkte, die man beachten sollte, um die Anwendung auf einem Smartphone 
+nutzerfreundlich zu gestalten:
 
+- Touch-Events statt Mouse-Events: Auf Smartphones wird die Interaktion über den Touchscreen gesteuert, 
+anstatt über die Maus. Daher müsste das Script angepasst werden, um Touch-Events (z.B. touchstart, touchmove)
+zu verwenden anstatt Mouse-Events (z.B. mousedown, mousemove).
 
-Um die Bilder auch auf Mobilgeräten (mit Touchsteuerung) draggen zu können,
-müssen eventuell andere Events bzw. APIs verwendet werden, die auch Touches erkennen.
+- Touch-Feedback: Es ist sinnvoll, dem Nutzer visuelles Feedback zu geben, wenn er ein Element antippt bzw. es
+gedrückt hält, damit er weiß, dass seine Interaktion erkannt wird. Man kann hierbei z.B. das Element vergrößern,
+wenn es angetippt wird.
 
-Zudem ist das Layout nicht smartphone-freundlich. Die Bilder sind sehr klein
-und der Papierkorb befindet sich hinter der Picturesbox.
+- Layout-Anpassungen: Da die Bildschirme von Smartphones in der Regel kleiner sind als die von Desktops,
+müsste das Layout der Anwendung an die kleinere Auflösung angepasst werden. Hierbei sollte man darauf achten,
+dass die Elemente gut erreichbar und lesbar bleiben. Aktuell befindet sich nämlich z.B. das Papierkorb-Symbol
+HINTER der Picturesbox, was es unerreichbar macht.
+
+- Performance Optimierung: Aufgrund der geringeren Leistung von Smartphones müsste man die Performance der
+Anwendung optimieren, um ein flüssiges Nutzererlebnis zu gewährleisten. Hierbei kann man z.B. darauf achten,
+dass nicht unnötige Ressourcen geladen werden und dass das Script so effizient wie möglich arbeitet.
+
+- Testen auf verschiedenen Geräten: Um sicherzustellen, dass die Anwendung auf verschiedenen Smartphones und
+Tablets gut funktioniert, sollte man sie auf verschiedenen Geräten testen und gegebenenfalls anpassen.
+
+Mit diesen Maßnahmen kann man sicherstellen, dass die Anwendung auf Smartphones gut funktioniert und ein angenehmes
+Nutzererlebnis bietet. Es ist auch wichtig sicherzustellen, dass die Anwendung auf verschiedenen Betriebssystemen
+und Browsern unterstützt wird, da die Unterstützung von Drag & Drop-Funktionalität und Touch-Events von Browser zu
+Browser variiert, wie es sich bei mir in der Aufgabe 1 bemerktbar gemacht hat (siehe erste Abgabe).
+Es kann auch sinnvoll sein alternative Interaktionsmöglichkeiten wie z.B. Buttons oder Checkboxen bereitzustellen,
+um auch Nutzer*innen die die Drag & Drop-Funktionalität auf ihrem Gerät nicht unterstützt wird, die Möglichkeit zu
+geben, die Anwendung zu nutzen.

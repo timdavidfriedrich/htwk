@@ -19,7 +19,9 @@ function dragstart(e) {
 
 function dragover(e) {
    e.preventDefault();
-   if (e.target.nodeName !== "IMG") e.target.style.opacity = 0.5;
+   if (e.target.nodeName != "IMG") {
+      e.target.style.opacity = 0.5;
+   } 
 }
 
 function dragleave(e) {
@@ -27,12 +29,16 @@ function dragleave(e) {
 }
 
 function drop(e) {
+   e.preventDefault();
    e.target.style.opacity = 1;
    if (isTargetValid(e)) {
-      e.preventDefault();
-      e.target.appendChild(elementOf(e));
+      if (e.target.parentElement.id === "trash") {
+         elementOf(e).remove();
+      } else {
+         e.target.appendChild(elementOf(e));
+      }
    } else {
-      window.alert("Das Bild passt nicht in dieses Feld!");
+      alert("Das Bild passt nicht in dieses Feld!");
    }
 }
 
