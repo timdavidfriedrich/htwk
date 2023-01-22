@@ -50,7 +50,7 @@ let boardLayout;
  * der auf Klicks reagiert.
  */
 function startGame() {
-    board.style.opacity = 1;
+    changeLoserOpacity(1);
     board.style.height = boardHeight + "px";
     board.style.width = boardWidth + "px";
     board.style.gap = gapSize + "px";
@@ -75,8 +75,7 @@ function startGame() {
  * Wird ausgeführt, wenn auf ein Feld geklickt wird.
  * Nur, wenn das Feld leer ist, wird es mit dem aktuellen Spieler belegt.
  * Zudem wird überprüft, ob jemand gewonnen hat bzw. das Spiel vorbei ist.
- * @param {*} event 
- * @returns 
+ * @param {*} event Event-Objekt, das Informationen über das Event enthält.
  */
 function tileClicked(event) {
     if (hasGameEnded) return;
@@ -218,11 +217,30 @@ function checkDiagonalsForWinner() {
 }
 
 /**
+ * Ändert die Deckkraft aller nicht gewinnenden Felder.
+ * @param {*} opacity Neue Deckkraft.
+ */
+function changeLoserOpacity(opacity) {
+    tiles.forEach(tile => {
+        var matchesWinner = tile.classList.contains("x") && player === playerX ||
+                            tile.classList.contains("o") && player === playerO
+        if (!matchesWinner) {
+            tile.style.opacity = opacity;
+        }
+    });
+}
+
+/**
  * Beendet das Spiel.
+ * Alle leeren Felder zeigen keine Pointer-Cursor mehr und
+ * die Deckkraft aller nicht gewinnenden Felder wird reduziert.
  */
 function finishGame() {
+    tiles.forEach(tile => tile.classList.contains("empty") 
+        ? tile.setAttribute("class", "emptyWithoutPointer") 
+        : null);
     hasGameEnded = true;
-    board.style.opacity = 0.24;
+    changeLoserOpacity(0.24);
     updateLabel();
 }
 
