@@ -1,4 +1,4 @@
-function initiate() {
+function initiateBoard() {
    const images = document.querySelectorAll('#picturesbox > img');
    for (let i = 0; i < images.length; i++) {
       images[i].addEventListener('dragstart', dragstart, false);
@@ -63,4 +63,4 @@ function elementOf(e) {
    return document.getElementById(elementId);
 }
 
-window.addEventListener('load', initiate, false);
+window.addEventListener('load', initiateBoard, false);

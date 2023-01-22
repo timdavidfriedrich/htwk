@@ -1,0 +1,53 @@
+body {
+    font-family: "Poppins";
+    background-color: #27244B;
+}
+
+#gameContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#label {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#restartButton {
+    font-family: "Poppins";
+    background-color: #268FDB;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    width: 100%;
+    padding: 16px 32px;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.empty {
+    background-color: #332F63;
+    border-radius: 24%;
+    cursor: pointer;
+}
+
+.x {
+    background-color: rgba(255, 248, 84, 24%);
+    border-radius: 24%;
+}
+
+.o {
+    background-color: rgba(255, 83, 83, 24%);
+    border-radius: 24%;
+}
