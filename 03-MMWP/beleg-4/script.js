@@ -50,7 +50,6 @@ let boardLayout;
  * der auf Klicks reagiert.
  */
 function startGame() {
-    changeLoserOpacity(1);
     board.style.height = boardHeight + "px";
     board.style.width = boardWidth + "px";
     board.style.gap = gapSize + "px";
@@ -58,6 +57,7 @@ function startGame() {
     hasGameEnded = false;
     player = playerX;
     boardLayout = initialBoardLayout;
+    changeEveryOpacity(1);
     updateLabel();
 
     tiles.forEach((tile) => {
@@ -221,13 +221,20 @@ function checkDiagonalsForWinner() {
  * @param {*} opacity Neue Deckkraft.
  */
 function changeLoserOpacity(opacity) {
+    var isDrawed = boardLayout.flat().every(tile => tile !== "");
     tiles.forEach(tile => {
         var matchesWinner = tile.classList.contains("x") && player === playerX ||
-                            tile.classList.contains("o") && player === playerO
-        if (!matchesWinner) {
+                            tile.classList.contains("o") && player === playerO;
+        if (isDrawed) {
+            tile.style.opacity = opacity;
+        } else if (!matchesWinner) {
             tile.style.opacity = opacity;
         }
     });
+}
+
+function changeEveryOpacity(opacity) {
+    tiles.forEach(tile => tile.style.opacity = opacity);
 }
 
 /**
