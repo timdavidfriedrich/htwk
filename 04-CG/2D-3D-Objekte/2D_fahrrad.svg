@@ -1,0 +1,48 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Vordere Speichen -->
+    <line x1="100" y1="450" x2="300" y2="450" stroke="#a5a5a5" stroke-width="10"/>
+    <line transform="rotate(45 200 450)" x1="100" y1="450" x2="300" y2="450" stroke="#a5a5a5" stroke-width="10"/>
+    <line x1="200" y1="350" x2="200" y2="550" stroke="#a5a5a5" stroke-width="10"/>
+    <line transform="rotate(45 200 450)" x1="200" y1="350" x2="200" y2="550" stroke="#a5a5a5" stroke-width="10"/>
+    <circle cx="200" cy="450" r="10" fill="black"/>
+
+    <!-- Hintere Speichen -->
+    <line x1="450" y1="450" x2="650" y2="450" stroke="#a5a5a5" stroke-width="10"/>
+    <line transform="rotate(45 550 450)" x1="450" y1="450" x2="650" y2="450" stroke="#a5a5a5" stroke-width="10"/>
+    <line x1="550" y1="350" x2="550" y2="550" stroke="#a5a5a5" stroke-width="10"/>
+    <line transform="rotate(45 550 450)" x1="550" y1="350" x2="550" y2="550" stroke="#a5a5a5" stroke-width="10"/>
+    <circle cx="550" cy="450" r="10" fill="black"/>
+
+    <!-- Raeder -->
+    <circle cx="200" cy="450" r="90" fill="transparent" stroke="#3d3dc7" stroke-width="15"/>
+    <circle cx="200" cy="450" r="100" fill="transparent" stroke="black" stroke-width="15"/>
+    <circle cx="550" cy="450" r="90" fill="transparent" stroke="#3d3dc7" stroke-width="15"/>
+    <circle cx="550" cy="450" r="100" fill="transparent" stroke="black" stroke-width="15"/>
+    
+    <!-- Rahmen -->
+    <line x1="250" y1="250" x2="200" y2="450" stroke="black" stroke-width="15"/>
+    <line x1="550" y1="450" x2="400" y2="450" stroke="black" stroke-width="15"/>
+    <line x1="450" y1="300" x2="550" y2="450" stroke="black" stroke-width="15"/>
+    <line x1="240" y1="300" x2="450" y2="300" stroke="black" stroke-width="15"/>
+    <line x1="460" y1="270" x2="400" y2="450" stroke="black" stroke-width="15"/>
+    <line x1="240" y1="300" x2="400" y2="450" stroke="black" stroke-width="15"/>
+
+    <!-- Lenker -->
+    <line x1="245" y1="250" x2="290" y2="250" stroke="#3d3dc7" stroke-width="15"/>
+    <circle cx="247" cy="250" r="7.5" fill="#3d3dc7"/>
+
+    <!-- Sattel -->
+    <line x1="420" y1="270" x2="475" y2="270" stroke="#4a4a4a" stroke-width="15"/>
+
+    <!-- Hintere Pedale -->
+    <line x1="400" y1="450" x2="430" y2="500" stroke="#4a4a4a" stroke-width="10"/>
+    <line x1="400" y1="500" x2="445" y2="500" stroke="#3d3dc7" stroke-width="15"/>
+
+    <!-- Pedalen-Achse -->
+    <circle cx="400" cy="450" r="30" fill="#a5a5a5"/>
+    <circle cx="400" cy="450" r="12" fill="#4a4a4a"/>
+
+    <!-- Vordere Pedale -->
+    <line x1="370" y1="400" x2="400" y2="450" stroke="#4a4a4a" stroke-width="10"/>
+    <line x1="350" y1="400" x2="395" y2="400" stroke="#3d3dc7" stroke-width="15"/>
+</svg>
