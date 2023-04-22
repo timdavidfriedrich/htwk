@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K2022 A1</title>
+</head>
+
+<style>
+    root {
+        font-size: 16px;
+    }
+
+    #text1 {
+        font-size: 1rem;
+    }
+
+    #text2 {
+        font-size: 2rem;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    /* .bilder {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } */
+
+    .bilder {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+    }
+    
+    .bilder > img {
+        max-width: 50%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <div class="bilder">
+        <img src="./assets/brot.jpg" alt="Brot">
+        <img src="./assets/haus.jpg" alt="Haus">
+    </div>
+    <div id="text1">BUMMS1</div>
+    <div id="text2">BUMMS2</div>
+</body>
+
+</html>
