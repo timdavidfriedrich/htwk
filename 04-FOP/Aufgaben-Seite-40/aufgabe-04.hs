@@ -1,12 +1,7 @@
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Use camelCase" #-}
-{-# HLINT ignore "Redundant lambda" #-}
 import qualified Prelude
 import Test.LeanCheck
 import GHC.Generics
 import Test.LeanCheck.Generic
-import Test.LeanCheck.Utils
-import Language.Haskell.TH (safe)
 
 
 -- Spezifikation für min und max:
@@ -58,7 +53,7 @@ median_manuell_check = do
     Prelude.map (\ (x, y, z, s) -> median x y z Prelude.== s) median_test_faelle;
 
 
--- Test-Fälle für median_manual_check
+-- Test-Fälle für median_manuell_check
 median_test_faelle :: [(N, N, N, N)]
 median_test_faelle = 
             [ (S Z, S (S Z), S (S (S Z)), S (S Z))
