@@ -1,8 +1,12 @@
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Use camelCase" #-}
+{-# HLINT ignore "Redundant lambda" #-}
 import qualified Prelude
 import Test.LeanCheck
 import GHC.Generics
 import Test.LeanCheck.Generic
 import Test.LeanCheck.Utils
+import Language.Haskell.TH (safe)
 
 
 -- Spezifikation für min und max:
@@ -49,11 +53,14 @@ median x y z = minus (minus (plus x (plus y z)) (max (max x y) z)) (min (min x y
 median_check :: N -> N -> N -> Prelude.Bool
 median_check = \ x y z -> median x y z Prelude.== median y x z Prelude.&& median x y z Prelude.== median x z y Prelude.&& median x y z Prelude.== median y z x Prelude.&& median x y z Prelude.== median z x y Prelude.&& median x y z Prelude.== median z y x Prelude.&& median x y z Prelude.== median (median x y z) (median x y z) (median x y z);
 
+-- Manuelle Tests für Median
+median_manuell_check = do
+    Prelude.map (\ (x, y, z, s) -> median x y z Prelude.== s) median_test_faelle;
 
 
--- Test-Fälle, falls manuelles Testen notwendig ist
-median_test_cases :: [(N, N, N, N)]
-median_test_cases = 
+-- Test-Fälle für median_manual_check
+median_test_faelle :: [(N, N, N, N)]
+median_test_faelle = 
             [ (S Z, S (S Z), S (S (S Z)), S (S Z))
             , (S (S (S Z)), S (S Z), S Z, S (S Z))
             , (S (S Z), S (S (S Z)), S Z, S (S Z))
@@ -63,6 +70,6 @@ median_test_cases =
             , (S (S Z), S (S Z), S (S Z), S (S Z))
             , (S Z, S Z, S (S Z), S Z)
             , (S (S Z), S Z, S Z, S Z)
-            , (S(Z), (S(S Z)), S Z, S Z)
+            , (S Z, S(S Z), S Z, S Z)
             , (Z, Z, Z, Z)
             ];
